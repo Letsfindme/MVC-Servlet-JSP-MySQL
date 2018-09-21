@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="MVC -servlets-JSP-MySQL:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/MVC__servlets_JSP_MySQL_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="MVC-servlets-JSP-MySQL/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="MVC-servlets-JSP-MySQL" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
