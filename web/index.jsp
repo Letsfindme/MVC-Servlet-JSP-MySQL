@@ -11,6 +11,8 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <center><h2>My Home Page</h2></center>
+  Welcome <%=request.getAttribute("userName") %>
+  <div style="text-align: right"><a href="LogoutServlet">Logout</a></div>
   </body>
 </html>
