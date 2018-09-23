@@ -1,12 +1,12 @@
 package com.mvc.dao;
 
 
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import com.mvc.bean.LoginBean;
 import com.mvc.util.DBConnection;
+import com.mysql.jdbc.Connection;
 
 
 public class LoginDao {
@@ -27,7 +27,7 @@ public class LoginDao {
         try {
             con = DBConnection.createConnection(); //establishing connection
             statement = con.createStatement(); //Statement is used to write queries. Read more about it.
-            resultSet = statement.executeQuery("SELECT userName,password FROM users"); //Here table name is users and userName,password are columns. fetching all the records and storing in a resultSet.
+            resultSet = statement.executeQuery("SELECT userName,password FROM hello.usres"); //Here table name is users and userName,password are columns. fetching all the records and storing in a resultSet.
 
             while (resultSet.next()) // Until next row is present otherwise it return false
             {
