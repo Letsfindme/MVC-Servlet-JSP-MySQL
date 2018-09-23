@@ -7,6 +7,9 @@
         <element id="directory" name="classes">
           <element id="module-output" name="MVC-servlets-JSP-MySQL" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../../Apps/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46-bin.jar" />
+        </element>
       </element>
     </root>
   </artifact>
