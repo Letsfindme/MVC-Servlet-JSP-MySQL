@@ -8,11 +8,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>My Home Page</title>
   </head>
   <body>
+
+
   <center><h2>My Home Page</h2></center>
+
   Welcome <%=request.getAttribute("userName") %>
-  <div style="text-align: right"><a href="LogoutServlet">Logout</a></div>
+
+  <div style="text-align: right">
+    <a href="LogoutServlet">Logout</a>
+  </div>
+
   </body>
+
 </html>

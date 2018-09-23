@@ -26,13 +26,15 @@ public class LoginDao {
 
         try {
             con = DBConnection.createConnection(); //establishing connection
-            statement = con.createStatement(); //Statement is used to write queries. Read more about it.
-            resultSet = statement.executeQuery("SELECT userName,password FROM hello.usres"); //Here table name is users and userNameInput,passwordInput are columns. fetching all the records and storing in a resultSet.
+            statement = con.createStatement(); //Statement is used to write queries.
+            resultSet = statement.executeQuery("SELECT userName,password FROM hello.usres");
 
-            while (resultSet.next()) // Until next row is present otherwise it return false
-            {
-                userNameDB = resultSet.getString("userNameInput"); //fetch the values present in database
-                passwordDB = resultSet.getString("passwordInput");
+
+            // Until next row is present otherwise it return false
+            while (resultSet.next()){
+
+                userNameDB = resultSet.getString("userName"); //fais attention c'est les valeurs du DB
+                passwordDB = resultSet.getString("password");
 
                 if (userNameInput.equals(userNameDB) && passwordInput.equals(passwordDB)) {
                     return "SUCCESS";
@@ -44,7 +46,7 @@ public class LoginDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        System.out.print("nooooooooooooooooooooooooooooooooooooooooo");
+        System.out.print("Invalid user credentials");
         return "Invalid user credentials";
 
     }

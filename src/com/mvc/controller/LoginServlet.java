@@ -30,11 +30,13 @@ public class LoginServlet extends HttpServlet {
         String userValidate = loginDao.authenticateUser(loginBeanInput);
 
         if(userValidate.equals("SUCCESS")){
+            System.out.print("SUCCESSyes");
             request.setAttribute("userNameInput", userNameInput); //with setAttribute() you can define a "key" and value pair so that you can get it in future using getAttribute("key")
             request.getRequestDispatcher("/Home.jsp").forward(request, response);//RequestDispatcher is used to send the control to the invoked page.
         }
-        
+
         else{
+            System.out.print("SUCCESSno");
             request.setAttribute("errMessage", userValidate); // Here the error message returned from function has been stored in a errMessage key.
             request.getRequestDispatcher("/Login.jsp").forward(request, response);//forwarding the request
         }
